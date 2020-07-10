@@ -1,0 +1,64 @@
+.post-note-wrapper{
+    margin-left: 2rem;
+}
+
+.post-note-title{
+    height: 2rem;
+    width: 10rem;
+    text-align: center;
+    font-weight: 500;
+    border-radius: 15px;
+    background: #5BE3C2;
+    color: #ffffff;
+    line-height: 2rem;
+}
+.main-note-wrapper{
+    margin-top: 1rem;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 2rem 0;
+    height: 20rem;
+}
+.post-note-heading input{
+    outline: none;
+    border: none;
+}
+.post-note-heading{
+    border-bottom: 0.4px solid #C4C4C4;
+    transform: rotate(-0.11deg);
+    width: 100%;
+}
+
+.post-note-text-body{
+    width: 100%;
+    border-bottom: 0.4px solid #C4C4C4;
+    transform: rotate(-0.11deg);
+}
+.post-note-text-body textarea{
+    height: 17rem;
+    width: 98%;
+    outline: none;
+    border: none;
+}
+.post-note-btn-wrap{
+    width: 100%;
+    float: right;
+}
+.post-note-btn-wrap button{
+    float: right;
+    margin-right: 2rem;
+    margin-top: 0.5rem;
+    height: 2rem;
+    background: #5BE3C2;
+    border-radius: 10px;
+    outline: none;
+    color: #ffffff;
+    border: none;
+    width: 6rem;
+}
+button{
+    cursor: pointer;
+}
+.post-note-btn-wrap button:hover{
+    background-color: #37af92;
+}

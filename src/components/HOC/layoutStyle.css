@@ -1,0 +1,11 @@
+.layout-wrapper{
+    /* overflow: auto; */
+    width: 100%;
+    max-width: 70%;
+    margin: 0 auto;
+    display: flex;
+}
+.layout-right-side{
+    width: 60%;
+    margin-top: 2rem;
+}
