@@ -1,0 +1,16 @@
+.header-wrapper{
+    width: 100%;
+    height: 4rem;
+    background-color: #ffffff;
+    box-shadow: 16px 8px 4px rgba(0, 0, 0, 0.25);
+}
+
+.logo{
+    font-family: Kaushan Script;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 58px;
+    color: #5BE3C2;
+    margin-left: 3rem;
+}
