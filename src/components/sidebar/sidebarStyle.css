@@ -1,0 +1,37 @@
+.sidebar-wrapper{
+    /* position: absolute; */
+    width: 352px;
+    height: 250px;
+    background: #FFFFFF;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-top: 2rem;
+}
+
+.sidebar-top-wrap{
+    width: 352px;
+    height: 97px;
+    background: #F7F7F7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sidebar-top-wrap input{
+    width: 236px;
+    height: 37px;
+    background: #FFFFFF;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+}
+.sidebar-btm-columns{
+    width: 350px;
+    height: 3.1rem;
+    border: 0.6px solid #C4C4C4;
+    display: flex;
+    align-items: center;
+}
+.sidebar-title-container{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+}
