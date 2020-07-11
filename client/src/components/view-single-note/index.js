@@ -5,6 +5,7 @@ import NoteCard from '../utils/note-card/NoteCard';
 const SingleNote = (props) => {
     let [heading, setheading] = useState('')
     let [noteBody, setNoteBody] = useState('')
+    let [date, setDate] = useState('')
     let [loading, setLoading] = useState(true)
     const { id } = props.match.params
     useEffect(() => {
@@ -22,6 +23,7 @@ const SingleNote = (props) => {
                     console.log(res)
                     setheading(res.data.title)
                     setNoteBody(res.data.noteBody)
+                    setDate(res.data.date)
                 }
             })
     }, [id])
@@ -31,6 +33,7 @@ const SingleNote = (props) => {
                 : <NoteCard
                     heading={heading}
                     noteBody={noteBody}
+                    date={date}
                 />}
         </div>
     )

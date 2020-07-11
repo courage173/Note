@@ -65,4 +65,27 @@ export const getAllNote = (req, res) => {
     }
 }
 
+export const updateFavourite = (req, res) => {
+    try {
+        const { id } = req.params
+        const { favourite } = req.body
+        Note.findOneAndUpdate({ _id: id },
+            { $set: { "favourite": favourite } },
+            { new: true },
+            (err, doc) => {
+                if (err) return res.json({ success: false, err })
+                return res.status(200).json({
+                    success: true,
+                    favourite: doc.favourite
+                })
+            }
+        )
+    } catch (err) {
+        return res.status(400).json({
+            success: false,
+            message: err.message
+        })
+    }
+}
+
 

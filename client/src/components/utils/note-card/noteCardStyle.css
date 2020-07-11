@@ -4,6 +4,7 @@
     background: #FFFFFF;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
     margin-left: 2rem;
+    margin-bottom: 2rem;
 }
 .note-card-right-side{
     width: 21px;
@@ -30,7 +31,8 @@
     color: #FFFFFF;
     text-align: center;
     line-height: 2rem;
-    margin: 1rem
+    margin: 1rem;
+    cursor: pointer;
 }
 
 .note-card-text-wrapper{
@@ -44,4 +46,8 @@
     font-size: 24px;
     line-height: 29px;
     margin: 0;
+}
+
+#note-fav-bg{
+    background-color: red;
 }

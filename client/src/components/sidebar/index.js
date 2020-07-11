@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link, withRouter } from 'react-router-dom';
 import './sidebarStyle.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStickyNote } from '@fortawesome/free-solid-svg-icons/faStickyNote';
@@ -20,19 +21,19 @@ const Sidebar = () => {
             <div>
                 <div className='sidebar-btm-columns'>
                     <FontAwesomeIcon icon={faNotesMedical} style={{ marginLeft: 20, color: '#5BE3C2' }} />
-                    <div className='sidebar-title-container'><h4>create New notes</h4></div>
+                    <div className='sidebar-title-container'><Link to='/'>create New notes</Link></div>
                 </div>
                 <div className='sidebar-btm-columns'>
                     <FontAwesomeIcon icon={faStickyNote} style={{ marginLeft: 20, color: '#5BE3C2' }} />
-                    <div className='sidebar-title-container'><h4>Saved notes</h4></div>
+                    <div className='sidebar-title-container'><Link to='/save-notes'>Saved notes</Link></div>
                 </div>
                 <div className='sidebar-btm-columns'>
                     <FontAwesomeIcon icon={faHeart} style={{ marginLeft: 20, color: '#5BE3C2' }} />
-                    <div className='sidebar-title-container'><h4>Favourites</h4></div>
+                    <div className='sidebar-title-container'><Link to='/favourite'>Favourites</Link></div>
                 </div>
             </div>
         </div>
     )
 }
 
-export default Sidebar
+export default withRouter(Sidebar)
