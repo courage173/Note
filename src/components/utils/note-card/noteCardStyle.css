@@ -1,0 +1,43 @@
+.note-card-wrapper{
+    display: flex;
+    min-height: 236px;
+    background: #FFFFFF;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-left: 2rem;
+}
+.note-card-right-side{
+    width: 21px;
+    background: #5B61E3;
+}
+.note-card-left-side{
+    width: 97%;
+}
+.note-fav-icon-wrap{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.note-fav-icon-container{
+    width: 30px;
+    height: 30px;
+    background: #5BE3C2;
+    border-radius: 50%;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 2rem;
+    margin: 1rem
+}
+
+.note-card-text-wrapper{
+    padding-left: 30px;
+    padding-right: 20px;
+}
+.note-card-text-wrapper h5{
+    font-family: Gill Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 0;
+}
