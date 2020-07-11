@@ -4,10 +4,10 @@
 
 .post-note-title{
     height: 2rem;
-    width: 10rem;
     text-align: center;
     font-weight: 500;
-    border-radius: 15px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     background: #5BE3C2;
     color: #ffffff;
     line-height: 2rem;
@@ -16,12 +16,14 @@
     margin-top: 1rem;
     width: 100%;
     background-color: #ffffff;
-    padding: 1rem 0;
-    height: 20rem;
+    padding-bottom: 1rem;
+    height: 22rem;
 }
 .post-note-heading input{
     outline: none;
     border: none;
+    width: 99%;
+    height: 2rem
 }
 .post-note-heading{
     border-bottom: 0.4px solid #C4C4C4;
@@ -45,7 +47,6 @@
     float: right;
 }
 .post-note-btn-wrap button{
-    float: right;
     margin-right: 2rem;
     margin-top: 0.5rem;
     height: 2rem;
@@ -61,4 +62,13 @@ button{
 }
 .post-note-btn-wrap button:hover{
     background-color: #37af92;
+}
+.post-error{
+    margin-right: 1rem;
+    line-height: 3rem;
+    color: rgb(245, 105, 105);
+}
+.error-btn-wrapper{
+    float: right;
+    display: flex;
 }

@@ -1,7 +1,8 @@
 import { Note } from '../models/note';
 export const postNote = (req, res) => {
     try {
-        const note = new Note(re.body)
+
+        const note = new Note(req.body)
         note.save((err, doc) => {
             if (err) return res.status(400).json({
                 success: false,
@@ -10,7 +11,7 @@ export const postNote = (req, res) => {
 
             return res.status(201).json({
                 success: true,
-                data: doc._id
+                id: doc._id
             })
         })
     } catch (err) {

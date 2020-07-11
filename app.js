@@ -2,7 +2,9 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
-
+import cors from 'cors';
+import { postNote, getSingleNote } from './controllers/noteController';
+import { validateNote } from './middlewares/validation';
 const app = express();
 
 dotenv.config();
@@ -11,6 +13,7 @@ mongoose.Promise = global.Promise;
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false })
 
 
+app.use(cors())
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content, Accept, Content-Type, Authorization');
@@ -20,5 +23,8 @@ app.use((req, res, next) => {
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+app.post('/v1/post-note', validateNote, postNote)
+app.get('/v1/get-single-note/:id', getSingleNote)
 
 export default app
