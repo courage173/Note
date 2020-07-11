@@ -11,7 +11,7 @@ const PostNote = () => {
                 <div className='post-note-heading'>
                     <input
                         type='text'
-                        placeholder='Heading...'
+                        placeholder='Heading'
                         value={heading}
                         onChange={e => setHeading(e.target.value)}
                     />
@@ -20,7 +20,7 @@ const PostNote = () => {
                     <textarea
                         value={noteBody}
                         onChange={e => setNoteBody(e.target.value)}
-                        placeholder='Add note here'
+                        placeholder='Add note here...'
                     />
                 </div>
                 <div className='post-note-btn-wrap'>
