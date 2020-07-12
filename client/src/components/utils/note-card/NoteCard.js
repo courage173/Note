@@ -4,9 +4,23 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons/faHeart';
 
 const NoteCard = (props) => {
-    console.log(props.favourite)
     const handleFav = () => {
-        props.runAction(props.id, true)
+        const favourite = !props.favourite
+        const request = {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ favourite })
+        }
+        fetch(`http://localhost:3001/v1/update-favourite/${props.id}`, request)
+            .then((res) => res.json())
+            .then((res) => {
+                if (res.success) {
+                    props.runAction(props.id, res.favourite)
+                }
+            })
+
     }
     return (
         <div className='note-card-wrapper'>

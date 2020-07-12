@@ -3,7 +3,7 @@ import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import cors from 'cors';
-import { postNote, getSingleNote, getAllNote, updateFavourite } from './controllers/noteController';
+import { postNote, getSingleNote, getAllNote, updateFavourite, getAllFavourites } from './controllers/noteController';
 import { validateNote } from './middlewares/validation';
 const app = express();
 
@@ -27,6 +27,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.post('/v1/post-note', validateNote, postNote)
 app.get('/v1/get-single-note/:id', getSingleNote)
 app.get('/v1/get-all-note', getAllNote)
-app.patch('/v1/update-favourite', getAllNote)
+app.patch('/v1/update-favourite/:id', updateFavourite)
+app.get('/v1/get-favourite', getAllFavourites)
 
 export default app
