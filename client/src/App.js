@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import Header from './components/header';
 import Routes from './Routes';
 import { ToastContainer } from 'react-toastify';
@@ -21,9 +21,9 @@ function App() {
         pauseOnHover
       />
       <Header />
-      <HashRouter>
+      <BrowserRouter>
         <Routes />
-      </HashRouter>
+      </BrowserRouter>
     </div>
   );
 }
