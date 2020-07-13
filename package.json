@@ -6,8 +6,9 @@
   "scripts": {
     "lint": "eslint ./ --quiet",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
+    "build": "babel server --out-dir build --delete-dir-on-start",
     "dev": "NODE_ENV=dev nodemon --exec babel-node ./server/server.js",
-    "start": "NODE_ENV=production node server/server.js",
+    "start": "NODE_ENV=production node build/server.js",
     "test": "cross-env-shell NODE_ENV=test && nyc mocha src/tests/**/*.js --require @babel/register --reporter spec --timeout 25000"
   },
   "repository": {
