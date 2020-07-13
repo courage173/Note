@@ -1,8 +1,9 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
-import mongoose from 'mongoose';
 import cors from 'cors';
+import mongoose from 'mongoose';
+import path from 'path';
 import { postNote, getSingleNote, getAllNote, updateFavourite, getAllFavourites, search } from './controllers/noteController';
 import { validateNote } from './middlewares/validation';
 const app = express();
@@ -15,13 +16,17 @@ mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTop
 
 
 app.use(cors())
-app.use(express.static('./client/build'))
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content, Accept, Content-Type, Authorization');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
     next();
 });
+
+
+app.use(express.static('./client/build'))
+
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -32,5 +37,9 @@ app.get('/v1/get-all-note', getAllNote)
 app.patch('/v1/update-favourite/:id', updateFavourite)
 app.get('/v1/get-favourite', getAllFavourites)
 app.post('/v1/search', search)
+
+app.get('*', (request, response) => {
+    response.sendFile(path.join(__dirname, '../client/build', 'index.html'));
+});
 
 export default app
