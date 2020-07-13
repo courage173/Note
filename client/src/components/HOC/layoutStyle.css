@@ -9,3 +9,16 @@
     width: 60%;
     margin-top: 2rem;
 }
+
+@media only screen and (max-width: 768px){
+       .layout-wrapper{
+        overflow: none; 
+        max-width: 100%;
+         flex-direction: column;
+         margin: 0;
+       }
+       .layout-right-side {
+        width: 100%;
+        margin-top: 18px;
+       }
+}

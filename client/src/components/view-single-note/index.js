@@ -6,6 +6,8 @@ const SingleNote = (props) => {
     let [heading, setheading] = useState('')
     let [noteBody, setNoteBody] = useState('')
     let [date, setDate] = useState('')
+    let [favourite, setFavourite] = useState('')
+
     let [loading, setLoading] = useState(true)
     const { id } = props.match.params
     useEffect(() => {
@@ -20,13 +22,18 @@ const SingleNote = (props) => {
             .then((res) => {
                 setLoading(false)
                 if (res.success) {
-                    console.log(res)
                     setheading(res.data.title)
                     setNoteBody(res.data.noteBody)
                     setDate(res.data.date)
+                    setDate(res.data.favourite)
+
                 }
             })
     }, [id])
+
+    const handleFav = (_, fav) => {
+        setFavourite(fav)
+    }
     return (
         <div>
             {loading ? <div style={{ fontWeight: '600', marginLeft: '2rem' }}>loading...</div>
@@ -34,6 +41,9 @@ const SingleNote = (props) => {
                     heading={heading}
                     noteBody={noteBody}
                     date={date}
+                    id={id}
+                    runAction={handleFav}
+                    favourite={favourite}
                 />}
         </div>
     )

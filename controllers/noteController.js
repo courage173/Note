@@ -105,3 +105,23 @@ export const getAllFavourites = (req, res) => {
     }
 }
 
+export const search = (req, res) => {
+    try {
+        let { searchWord } = req.body
+
+        Note.find({ $text: { $search: searchWord } }, (err, doc) => {
+            if (err) return res.json({ success: false, err })
+            console.log(doc)
+            return res.status(200).json({
+                success: true,
+                data: doc
+            })
+        })
+
+    } catch (err) {
+        return res.status(400).json({
+            success: false,
+            message: err.message
+        })
+    }
+}

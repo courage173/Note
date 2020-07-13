@@ -72,3 +72,12 @@ button{
     float: right;
     display: flex;
 }
+
+@media only screen and (max-width: 768px){
+    .main-note-wrapper{
+        margin-top: 0;
+    }
+    .post-note-wrapper{
+        margin-left: 0;
+    }
+}
