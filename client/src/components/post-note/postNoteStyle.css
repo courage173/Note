@@ -80,4 +80,7 @@ button{
     .post-note-wrapper{
         margin-left: 0;
     }
+    .post-note-heading {
+        border-bottom: 1px solid #C4C4C4
+    }
 }

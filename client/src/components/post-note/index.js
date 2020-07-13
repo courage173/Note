@@ -43,7 +43,7 @@ const PostNote = (props) => {
     return (
         <div className='post-note-wrapper'>
             <div className='post-note-title'>Add New Note</div>
-            {posted ? <div>your note is avalaible at <a href={`/note/${id}`}>www.localhost:3000/{id}</a></div> : null}
+            {posted ? <div>your note is avalaible at <a href={`/note/${id}`}>https//notify-app.herokuapp.com/{id}</a></div> : null}
             <div className='main-note-wrapper'>
                 <div className='post-note-heading'>
                     <input

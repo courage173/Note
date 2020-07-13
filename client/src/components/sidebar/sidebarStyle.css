@@ -71,8 +71,17 @@
         width: 100%;
         margin-top: 0;
     }
+    .sidebar-title-container {
+        display: block;
+    }
     .sidebar-top-wrap , .sidebar-btm-columns 
         {
         width: 100%;
+    }
+    .sidebar-btm-columns {
+        justify-content: center;
+    }
+    .sidebar-title-container a {
+        margin-left: 4rem;
     }
 }

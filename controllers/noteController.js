@@ -1,7 +1,6 @@
 import { Note } from '../models/note';
 export const postNote = (req, res) => {
     try {
-
         const note = new Note(req.body)
         note.save((err, doc) => {
             if (err) return res.status(400).json({
@@ -111,7 +110,6 @@ export const search = (req, res) => {
 
         Note.find({ $text: { $search: searchWord } }, (err, doc) => {
             if (err) return res.json({ success: false, err })
-            console.log(doc)
             return res.status(200).json({
                 success: true,
                 data: doc
