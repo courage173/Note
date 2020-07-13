@@ -11,6 +11,7 @@ dotenv.config();
 mongoose.set('useCreateIndex', true)
 mongoose.Promise = global.Promise;
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false })
+    .then(() => console.log('database connected')).catch(err => console.log(err))
 
 
 app.use(cors())

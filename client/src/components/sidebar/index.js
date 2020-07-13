@@ -23,7 +23,6 @@ const Sidebar = () => {
         fetch('http://localhost:3001/v1/search', request)
             .then((res) => res.json())
             .then((res) => {
-                console.log(res)
                 if (res.success) {
                     setSearchData(res.data)
                 }
@@ -31,8 +30,8 @@ const Sidebar = () => {
     }
 
     const showSearch = () => {
-        return searchData.map((item) => (
-            <div className='search-result-wrapper'>
+        return searchData.map((item, i) => (
+            <div className='search-result-wrapper' key={i}>
                 <a href={`/note/${item._id}`}>{item.title}
                     <FontAwesomeIcon icon={faArrowCircleRight} style={{ marginLeft: 20, color: '#5BE3C2' }} />
                 </a>
