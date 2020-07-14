@@ -14,7 +14,7 @@ class Favourite extends Component {
                 'Content-Type': 'application/json',
             },
         }
-        fetch('http://localhost:3001/v1/get-favourite', request)
+        fetch('https://notify-appl.herokuapp.com/v1/get-favourite', request)
             .then((res) => res.json())
             .then((res) => {
                 if (res.success) {
