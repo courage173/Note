@@ -17,7 +17,7 @@ const SingleNote = (props) => {
                 'Content-Type': 'application/json',
             },
         }
-        fetch(`http://localhost:3001/v1/get-single-note/${id}`, request)
+        fetch(`https://notify-appl.herokuapp.com/v1/get-single-note/${id}`, request)
             .then((res) => res.json())
             .then((res) => {
                 setLoading(false)

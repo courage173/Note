@@ -27,7 +27,7 @@ const PostNote = (props) => {
                 },
                 body: JSON.stringify(body)
             }
-            fetch('http://localhost:3001/v1/post-note', request)
+            fetch('https://notify-appl.herokuapp.com/v1/post-note', request)
                 .then((res) => res.json())
                 .then((res) => {
                     if (res.success) {

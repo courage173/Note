@@ -20,7 +20,7 @@ const Sidebar = () => {
             },
             body: JSON.stringify({ searchWord: search })
         }
-        fetch('http://localhost:3001/v1/search', request)
+        fetch('https://notify-appl.herokuapp.com/v1/search', request)
             .then((res) => res.json())
             .then((res) => {
                 if (res.success) {

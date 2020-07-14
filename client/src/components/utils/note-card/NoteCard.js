@@ -13,7 +13,7 @@ const NoteCard = (props) => {
             },
             body: JSON.stringify({ favourite })
         }
-        fetch(`http://localhost:3001/v1/update-favourite/${props.id}`, request)
+        fetch(`https://notify-appl.herokuapp.com/v1/update-favourite/${props.id}`, request)
             .then((res) => res.json())
             .then((res) => {
                 if (res.success) {
