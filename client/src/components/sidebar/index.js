@@ -55,7 +55,7 @@ const Sidebar = () => {
             <div>
                 <div className='sidebar-btm-columns'>
                     <FontAwesomeIcon icon={faNotesMedical} style={{ marginLeft: 20, color: '#5BE3C2' }} />
-                    <div className='sidebar-title-container'><Link to='/'>create New notes</Link></div>
+                    <div className='sidebar-title-container'><Link to='/'>create note</Link></div>
                 </div>
                 <div className='sidebar-btm-columns'>
                     <FontAwesomeIcon icon={faStickyNote} style={{ marginLeft: 20, color: '#5BE3C2' }} />
